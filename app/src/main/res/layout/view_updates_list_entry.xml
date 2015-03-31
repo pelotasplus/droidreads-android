@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        card_view:cardBackgroundColor="@color/updates_cardview_backround_color"
+        card_view:cardCornerRadius="0dp"
+        card_view:contentPadding="@dimen/updates_cardview_content_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="@dimen/updates_avatar_column_size"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|left">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/avatarImageView"
+                        android:layout_width="@dimen/updates_avatar_size"
+                        android:layout_height="@dimen/updates_avatar_size"
+                        android:scaleType="centerCrop"
+                        app:riv_oval="true"
+                        app:riv_tile_mode="clamp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/actorTextView"
+                        style="@style/UpdatesActorTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Aleksander Piotrowski" />
+
+                    <TextView
+                        android:id="@+id/timestampTextView"
+                        style="@style/UpdatesTimestampTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        tools:text="6 mins ago" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- book info -->
+            <include
+                android:id="@+id/bookContainer"
+                android:visibility="gone"
+                layout="@layout/view_updates_book_entry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- friend info -->
+            <include
+                android:id="@+id/friendContainer"
+                android:visibility="gone"
+                layout="@layout/view_updates_friend_entry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,261 @@
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Base"></style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="windowActionBar">false</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">false</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="DroidreadsTextView">
+        <item name="android:textColor">@color/default_text_color</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+    </style>
+
+    <style name="DroidreadsButton" parent="Base.TextAppearance.AppCompat">
+        <item name="android:background">@drawable/btn_regular_selector</item>
+        <item name="android:minWidth">@dimen/btn_regular_min_width</item>
+        <item name="android:minHeight">@dimen/btn_regular_min_height</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/btn_regular_text_selector</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">@dimen/btn_regular_padding</item>
+        <item name="android:paddingRight">@dimen/btn_regular_padding</item>
+        <item name="android:layout_marginLeft">@dimen/btn_regular_margin</item>
+        <item name="android:layout_marginRight">@dimen/btn_regular_margin</item>
+    </style>
+
+    <!-- UPDATES -->
+    <style name="UpdatesTextView" parent="DroidreadsTextView">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="UpdatesActorTextView" parent="UpdatesTextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="UpdatesTimestampTextView" parent="UpdatesTextView">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+    </style>
+
+    <style name="UpdatesBookTitleTextView" parent="UpdatesTextView">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="UpdatesBookByTextView" parent="UpdatesTextView">
+        <item name="android:textColor">@color/darker_gray</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_marginRight">4dp</item>
+    </style>
+
+    <style name="UpdatesBookAuthorTextView" parent="UpdatesTextView">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="UpdatesShelfTextView">
+        <item name="android:textColor">@color/darker_gray</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+    </style>
+
+
+    <!-- NOTIFICATIONS -->
+    <style name="NotificationsTextView" parent="DroidreadsTextView">
+    </style>
+
+    <style name="NotificationsTimestampTextView" parent="NotificationsTextView">
+    </style>
+
+    <!-- MAIN MENU -->
+    <style name="MainMenuRecyclerView">
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="MainMenuLogoutButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MainMenuContainer">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="MainMenuItemButton">
+    </style>
+
+
+    <!-- BOOK DETAILS -->
+    <style name="BookDetailsContainer">
+        <!--<item name="android:background">@android:color/darker_gray</item>-->
+        <item name="android:layout_marginTop">@dimen/vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/vertical_margin</item>
+        <item name="android:layout_marginLeft">@dimen/horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/horizontal_margin</item>
+    </style>
+
+    <style name="BookDetailsMiddleContainer" parent="BookDetailsContainer">
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+
+    <style name="BookDetailsTextView" parent="DroidreadsTextView">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="BookDetailsAuthorContainer" parent="BookDetailsContainer">
+    </style>
+
+    <style name="BookDetailsTitleTextView" parent="BookDetailsTextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/book_details_title_size</item>
+    </style>
+
+    <style name="BookDetailsByTextView" parent="BookDetailsTextView">
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">@dimen/book_details_by_size</item>
+        <item name="android:layout_marginRight">5dp</item>
+    </style>
+
+    <style name="BookDetailsAuthorTextView" parent="BookDetailsTextView">
+        <item name="android:textSize">@dimen/book_details_author_size</item>
+    </style>
+
+    <style name="BookDetailsDescriptionTextView" parent="BookDetailsTextView">
+        <item name="android:maxLines">8</item>
+        <item name="android:textSize">@dimen/book_details_description_size</item>
+    </style>
+
+    <style name="BookDetailsReadDescriptionButton">
+    </style>
+
+    <style name="BookDetailsRatingLabelTextView" parent="BookDetailsTextView">
+        <item name="android:textSize">@dimen/book_details_icon_label</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="BookDetailsRatingTextView" parent="BookDetailsTextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/book_details_icon_value</item>
+    </style>
+
+    <style name="BookDetailsIcon">
+        <item name="android:shadowColor">@android:color/darker_gray</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:textSize">@dimen/book_details_icon</item>
+        <item name="android:textColor">@color/book_details_icon</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+
+    <style name="BookDetailsIconsContainer" parent="BookDetailsContainer">
+    </style>
+
+    <style name="BookDetailsFormatTextView" parent="BookDetailsTextView">
+        <item name="android:textSize">@dimen/book_details_icon_value</item>
+    </style>
+
+    <style name="BookDetailsCategoryTextView" parent="BookDetailsTextView">
+        <item name="android:textSize">@dimen/book_details_icon_value</item>
+    </style>
+
+    <!-- BOOK DESCRIPTION -->
+    <style name="BookDescriptionToolbar">
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <!--<item name="android:background">@android:color/white</item>-->
+        <item name="android:textColor">@android:color/black</item>
+        <item name="drawerArrowStyle">@style/BookDescriptionToolbar.DrawerArrowStyle</item>
+        <item name="titleTextAppearance">@style/BookDescriptionToolbar.TextAppearance</item>
+    </style>
+
+    <style name="BookDescriptionToolbar.TextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@android:color/black</item>
+        <!--<item name="android:textColorPrimary">@android:color/black</item>-->
+        <!--<item name="android:textColorSecondary">@android:color/black</item>-->
+    </style>
+
+    <style name="BookDescriptionToolbar.DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="BookDetailsHeaderTextView" parent="DroidreadsTextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/section_text_size</item>
+    </style>
+
+    <style name="BookDetailsFooterLabelTextView" parent="BookDetailsTextView">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/book_details_footer_section_text_size</item>
+    </style>
+
+    <style name="BookDetailsFooterValueTextView" parent="BookDetailsTextView">
+        <item name="android:gravity">right</item>
+        <item name="android:textSize">@dimen/book_details_footer_value_text_size</item>
+    </style>
+
+    <style name="BookDetailsFooterSection">
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="BookDetailsFooterClickableSection">
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/clickable_container</item>
+    </style>
+
+    <!-- SIMILAR BOOK BOX -->
+    <style name="SimilarBookRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:numStars">5</item>
+        <item name="android:isIndicator">true</item>
+        <item name="android:progressDrawable">@drawable/btn_rating_star_normal</item>
+    </style>
+
+    <style name="SimilarBookTitleTextView" parent="DroidreadsTextView">
+        <item name="android:lines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:textSize">@dimen/similar_title_size</item>
+        <item name="android:textColor">@color/similar_title_color</item>
+    </style>
+
+    <style name="SimilarBookBottomBar">
+        <item name="android:background">@color/similar_book_description_background</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">3dp</item>
+    </style>
+
+    <style name="RatingStar">
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:focusable">false</item>
+        <item name="android:text">@string/fontawesome_star</item>
+        <item name="android:textColor">@color/star_disabled</item>
+    </style>
+
+</resources>

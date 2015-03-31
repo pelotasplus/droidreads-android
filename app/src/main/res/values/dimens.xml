@@ -1,0 +1,51 @@
+<resources>
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+
+    <dimen name="default_text_size">14sp</dimen>
+
+    <dimen name="horizontal_margin">16dp</dimen>
+    <dimen name="vertical_margin">16dp</dimen>
+
+    <dimen name="notifications_friend_image_size">50dp</dimen>
+    <dimen name="book_details_parallax_image_height">300dp</dimen>
+
+    <dimen name="updates_avatar_column_size">55dp</dimen>
+    <dimen name="updates_avatar_size">50dp</dimen>
+    <dimen name="avatar_radius">25dp</dimen>
+
+    <dimen name="book_grid_component_height">160dp</dimen>
+    <dimen name="similar_book_padding">5dp</dimen>
+
+    <dimen name="btn_regular_corner_radius">1dp</dimen>
+    <dimen name="btn_regular_min_width">88dp</dimen>
+    <dimen name="btn_regular_min_height">36dp</dimen>
+    <dimen name="btn_regular_padding">8dp</dimen>
+    <dimen name="btn_regular_margin">4dp</dimen>
+
+    <dimen name="book_details_author_avatar_size">60dp</dimen>
+    <dimen name="book_details_author_avatar_corner_radius">0dp</dimen>
+    <dimen name="book_details_author_avatar_border">1dp</dimen>
+
+    <dimen name="book_details_title_size">20sp</dimen>
+    <dimen name="book_details_author_size">15sp</dimen>
+    <dimen name="book_details_by_size">12sp</dimen>
+    <dimen name="book_details_description_size">14sp</dimen>
+    <dimen name="book_details_footer_section_text_size">12sp</dimen>
+    <dimen name="book_details_footer_value_text_size">14sp</dimen>
+    <dimen name="book_details_icon_label">13sp</dimen>
+    <dimen name="book_details_icon_value">14sp</dimen>
+
+    <dimen name="horizontal_separator_height">1px</dimen>
+    <dimen name="horizontal_separator_marginLeft">@dimen/horizontal_margin</dimen>
+    <dimen name="horizontal_separator_marginRight">@dimen/horizontal_margin</dimen>
+
+    <dimen name="section_text_size">16sp</dimen>
+    <dimen name="book_details_icon">40dp</dimen>
+
+    <dimen name="similar_title_size">12sp</dimen>
+    <dimen name="updates_cardview_content_padding">5dp</dimen>
+
+    <dimen name="book_update_cover_width">60dp</dimen>
+    <dimen name="book_update_cover_height">85dp</dimen>
+</resources>

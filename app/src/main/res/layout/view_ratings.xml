@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <IconTextView
+        style="@style/BookDetailsIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fontawesome_star" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/BookDetailsRatingLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="@string/avg" />
+
+        <TextView
+            android:id="@+id/ratingTextView"
+            style="@style/BookDetailsRatingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="4.4" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/BookDetailsRatingLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="@string/of" />
+
+        <TextView
+            android:id="@+id/reviewsCountTextView"
+            style="@style/BookDetailsRatingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="123,1231" />
+
+        <TextView
+            style="@style/BookDetailsRatingLabelTextView"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ratings" />
+
+    </LinearLayout>
+
+</LinearLayout>

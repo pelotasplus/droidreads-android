@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/icon_green_light</color>
+    <color name="colorPrimaryDark">@color/icon_green</color>
+
+    <color name="windowBackground">#ddd</color>
+
+    <color name="default_text_color">@android:color/holo_orange_dark</color>
+
+    <color name="similar_book_description_background">#eeffffff</color>
+
+    <color name="darker_gray">#888</color>
+    <color name="dark_gray">#aaa</color>
+    <color name="light_gray">#ddd</color>
+
+    <color name="icon_green">#608020</color>
+    <color name="icon_green_light">#99cc33</color>
+    <color name="icon_green_dark">#1d5600</color>
+
+    <color name="clickable_container_pressed">#eee</color>
+    <color name="border_default">@color/dark_gray</color>
+    <color name="separator_default">@color/dark_gray</color>
+
+    <color name="horizontal_separator">@color/separator_default</color>
+
+    <color name="btn_regular_pressed">@color/colorPrimaryDark</color>
+    <color name="btn_regular_normal">@color/colorPrimary</color>
+
+    <color name="btn_regular_text_normal">@android:color/white</color>
+    <color name="btn_regular_text_disabled">@color/dark_gray</color>
+
+    <color name="book_border">@color/border_default</color>
+
+    <color name="book_details_icon">@android:color/black</color>
+    <color name="book_details_author_avatar_border">@color/border_default</color>
+
+    <color name="similar_title_color">@android:color/black</color>
+
+    <color name="star_disabled">@color/dark_gray</color>
+    <color name="star_enabled">#ccac00</color>
+    <color name="updates_cardview_backround_color">@android:color/white</color>
+</resources>

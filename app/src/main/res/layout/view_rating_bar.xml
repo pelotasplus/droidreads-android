@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pl.pelotasplus.droidreads.views.RatingBar
+    android:id="@+id/ratingBar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        android:id="@+id/star1"
+        layout="@layout/view_rating_star" />
+
+    <include
+        android:id="@+id/star2"
+        layout="@layout/view_rating_star" />
+
+    <include
+        android:id="@+id/star3"
+        layout="@layout/view_rating_star" />
+
+    <include
+        android:id="@+id/star4"
+        layout="@layout/view_rating_star" />
+
+    <include
+        android:id="@+id/star5"
+        layout="@layout/view_rating_star" />
+
+</pl.pelotasplus.droidreads.views.RatingBar>

@@ -1,0 +1,363 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.github.ksoichiro.android.observablescrollview.ObservableScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- cover -->
+            <RelativeLayout
+                android:id="@+id/coverContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/book_details_parallax_image_height"
+                    android:contentDescription="@string/book_cover_cd"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_launcher" />
+
+                <View
+                    android:id="@+id/anchor"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/book_details_parallax_image_height"
+                    android:minHeight="@dimen/book_details_parallax_image_height" />
+            </RelativeLayout>
+
+            <!-- author box -->
+            <LinearLayout
+                style="@style/BookDetailsAuthorContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/authorImageView"
+                    android:layout_width="@dimen/book_details_author_avatar_size"
+                    android:layout_height="@dimen/book_details_author_avatar_size"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher"
+                    app:riv_border_color="@color/book_details_author_avatar_border"
+                    app:riv_border_width="@dimen/book_details_author_avatar_border"
+                    app:riv_corner_radius="@dimen/book_details_author_avatar_corner_radius"
+                    app:riv_mutate_background="false"
+                    app:riv_oval="true"
+                    app:riv_tile_mode="clamp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/titleTextView"
+                        style="@style/BookDetailsTitleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Long book title" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/BookDetailsByTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/by" />
+
+                        <TextView
+                            android:id="@+id/authorTextView"
+                            style="@style/BookDetailsAuthorTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="by Aleksander Piotrowski" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/horizontal_separator" />
+
+            <!-- icons -->
+            <LinearLayout
+                style="@style/BookDetailsIconsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <include
+                    layout="@layout/view_ratings"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <include
+                    layout="@layout/view_format"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <include
+                    layout="@layout/view_category"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <include layout="@layout/horizontal_separator" />
+
+            <!-- description -->
+            <LinearLayout
+                style="@style/BookDetailsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/descriptionTextView"
+                    style="@style/BookDetailsDescriptionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="XMPP is a robust protocol used for a wide range of applications, including instant messaging, multi-user chat, voice and video conferencing, collaborative spaces, real-time gaming, data synchronization, and search. This book teaches you how to harness the power of XMPP in your own apps and presents you with all the tools you need to build the next generation of apps using XMPP or add new features to your current apps. Featuring the JavaScript language throughout and making use of the jQuery library, the book contains several XMPP apps of increasing complexity that serve as ideal learning tools." />
+
+                <Button
+                    android:id="@+id/readDescriptionButton"
+                    style="@style/DroidreadsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/vertical_margin"
+                    android:text="@string/read_more"
+                    android:textAllCaps="true"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+            <!--<include layout="@layout/horizontal_separator" />-->
+
+            <!-- friends reviews section -->
+            <LinearLayout
+                android:id="@+id/friendsReviewsContainer"
+                style="@style/BookDetailsMiddleContainer"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/vertical_margin"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/BookDetailsHeaderTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/friends_reviews" />
+
+                    <Button
+                        android:id="@+id/moreFriendsReviewsButton"
+                        style="@style/DroidreadsButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/more"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/friendsReviewsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/book_grid_component_height" />
+
+            </LinearLayout>
+
+            <!--<include layout="@layout/horizontal_separator" />-->
+
+            <!-- similar section -->
+            <LinearLayout
+                android:id="@+id/similarBooksContainer"
+                style="@style/BookDetailsMiddleContainer"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/vertical_margin"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/BookDetailsHeaderTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/similar_books" />
+
+                    <Button
+                        android:id="@+id/moreSimilarButton"
+                        style="@style/DroidreadsButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/more"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/similarBooksRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/book_grid_component_height" />
+
+            </LinearLayout>
+
+            <include layout="@layout/horizontal_separator" />
+
+            <!-- bottom section -->
+            <LinearLayout
+                style="@style/BookDetailsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/BookDetailsFooterSection"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/BookDetailsFooterLabelTextView"
+                        android:text="@string/isbn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"/>
+
+                    <TextView
+                        android:id="@+id/isbnTextView"
+                        style="@style/BookDetailsFooterValueTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/BookDetailsFooterSection"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/BookDetailsFooterLabelTextView"
+                        android:text="@string/publisher"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"/>
+
+                    <TextView
+                        android:id="@+id/publisherTextView"
+                        style="@style/BookDetailsFooterValueTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/goodreadsIdContaner"
+                    style="@style/BookDetailsFooterClickableSection"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/BookDetailsFooterLabelTextView"
+                        android:text="@string/goodreads_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"/>
+
+                    <TextView
+                        android:id="@+id/goodreadsIdTextView"
+                        style="@style/BookDetailsFooterValueTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/googlebooksIdContaner"
+                    style="@style/BookDetailsFooterClickableSection"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/BookDetailsFooterLabelTextView"
+                        android:text="@string/googlebooks_id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"/>
+
+                    <TextView
+                        android:id="@+id/googlebooksIdTextView"
+                        style="@style/BookDetailsFooterValueTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
+
+    <View xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/gradient_header_background"
+        android:minHeight="?attr/actionBarSize" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize" />
+
+</FrameLayout>

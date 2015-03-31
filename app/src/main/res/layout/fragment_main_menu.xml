@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/MainMenuContainer">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView"
+        android:scaleType="fitXY"
+        app:riv_corner_radius="33dp"
+        app:riv_border_width="2dp"
+        app:riv_border_color="#333333"
+        app:riv_mutate_background="false"
+        app:riv_tile_mode="clamp"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/currentUserTextView"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        style="@style/MainMenuRecyclerView" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:text="@string/menu_item_logout"
+        style="@style/MainMenuLogoutButton" />
+
+</LinearLayout>
